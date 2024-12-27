@@ -1,16 +1,16 @@
 
 /* import { useUser } from '@auth0/nextjs-auth0/client'; */
-/* import CompPrueba from '@/components/Comp-prueba/CompPrueba';
-import { getSession } from '@auth0/nextjs-auth0'; */
+/* import CompPrueba from '@/components/Comp-prueba/CompPrueba'; */
+import { getSession } from '@auth0/nextjs-auth0';
 
 import Image from 'next/image';
 import Link from 'next/link';
 export default async function Home() {
   /* const { user } = useUser() */
 
-  /* const session = await getSession()
+  const session = await getSession()
   const user = session?.user
-  console.log("user", user); */
+  /* console.log("user", user); */
 
   return (
     <>
