@@ -8,8 +8,8 @@ import Link from 'next/link';
 export default async function Home() {
   /* const { user } = useUser() */
 
-  const session = await getSession()
-  const user = session?.user
+  /* const session = await getSession()
+  const user = session?.user */
   /* console.log("user", user); */
 
   return (
