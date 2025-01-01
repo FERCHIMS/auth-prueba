@@ -1,18 +1,25 @@
+/* import { getSession } from "@auth0/nextjs-auth0";
+import { redirect } from "next/navigation";
 import Image from "next/image"
 
 
-const CompPrueba = () => {
+const CompPrueba = async() => {
+  const session = await getSession()
+  const {user} = session?.user
+  
+  if(!user) {
+    redirect("/")
+  }
+  console.log("usuario", user);
+  
+
   return (
     <div className="w-full h-full bg-blue-300">
-        <h2 className="text-[6rem] font-bold">ESTO ES UN COMPONENTE </h2>
         
-          <video autoPlay loop muted>
-            <source src="https://res.cloudinary.com/discruduz/video/upload/v1735053436/Mingyu_Maluma_Greta_Lee_and_More_Celebrate_the_Paris_Store_Opening_Calvin_Klein_1_fjqwt5.mp4" />
-          </video>
+        <h2 className="text-[6rem] font-bold">{user.name} </h2>
         
-        {/* <Image src="https://iili.io/2nN1ufe.jpg" width={500} height={500} alt="fto"/> */}
     </div>
   )
 }
 
-export default CompPrueba
+export default CompPrueba */
