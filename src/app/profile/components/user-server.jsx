@@ -1,5 +1,7 @@
-/* import { getSession } from "@auth0/nextjs-auth0";
+import { getSession } from "@auth0/nextjs-auth0";
+
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 const ProfileServer = async() => {
     const session = await getSession();
@@ -9,6 +11,7 @@ const ProfileServer = async() => {
     if(!user) {
         return null
     }
+    redirect("/profile")
 
   return  (
     <div>
@@ -17,4 +20,4 @@ const ProfileServer = async() => {
   )
 }
 
-export default ProfileServer; */
+export default ProfileServer;
